@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="card" uuid="648d96cf-ed81-4e80-a4bf-40bc26a9ab75">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\joerg.brose\PycharmProjects\Simple Banking System\Simple Banking System\task\banking\card.s3db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="petTest" uuid="8fd83ddd-ca57-4f35-aec1-c9e0a7fcb13d">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\joerg.brose\PycharmProjects\Simple Banking System\Simple Banking System\task\banking\petTest.s3db</jdbc-url>
+    </data-source>
+  </component>
+</project>

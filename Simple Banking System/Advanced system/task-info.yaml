@@ -417,6 +417,84 @@ files:
     if __name__ == '__main__':
         BankingSystem('banking.banking').run_tests()
   learner_created: false
+- name: banking/dropcards.py
+  visible: true
+  text: |-
+    import sqlite3
+    connection = sqlite3.connect('card.s3db')
+
+    cursor = connection.cursor()
+
+    cursor.execute("DROP TABLE card")
+    result = cursor.fetchall()
+    print(result)
+    connection.commit()
+    connection.close()
+  learner_created: true
+- name: banking/Test2.py
+  visible: true
+  text: |-
+    import sqlite3
+    connection = sqlite3.connect('petTest.s3db')
+
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT * FROM pet")
+    result = cursor.fetchall()
+    print(result)
+    connection.commit()
+    connection.close()
+  learner_created: true
+- name: banking/createDatabase.py
+  visible: true
+  text: |
+    import sqlite3
+    connection = sqlite3.connect('petTest.s3db')
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        '''CREATE TABLE IF NOT EXISTS pet (
+            name TEXT,
+            owner TEXT,
+            legs INTEGER DEFAULT 4);
+        '''
+    )
+    cursor.execute("INSERT INTO pet VALUES ('Kitty', 'John', 4)")
+    cursor.execute("INSERT INTO pet VALUES ('Bello', 'Alex', 4)")
+    cursor.execute("SELECT * FROM pet")
+    result = cursor.fetchall()
+    print(result)
+    connection.commit()
+    connection.close()
+  learner_created: true
+- name: banking/bankingstrings.py
+  visible: true
+  text: |
+    import textwrap
+
+    account_string = textwrap.dedent("""\
+                                        1. Balance
+                                        2. Add income
+                                        3. Do transfer
+                                        4. Close account
+                                        5. Log out
+                                        0. Exit\n""")
+
+    main_menu_string = textwrap.dedent("""\
+                                        1. Create an account
+                                        2. Log into account
+                                        0. Exit\n""")
+    # print(main_menu_string)
+    # print(account_string)
+  learner_created: true
+- name: banking/card.s3db-journal
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/109/stages/594/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/109/stages/594/implement">JetBrains
+    Academy</a>
+  time: Tue, 29 Sep 2020 15:19:33 UTC
+record: 4

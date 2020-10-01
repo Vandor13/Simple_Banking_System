@@ -1,10 +1,5 @@
 type: edu
 files:
-- name: banking/banking.py
-  visible: true
-  text: |
-    # Write your code here
-  learner_created: false
 - name: tests.py
   visible: false
   text: |
@@ -276,6 +271,67 @@ files:
     if __name__ == '__main__':
         BankingSystem('banking.banking').run_tests()
   learner_created: false
+- name: banking/card.s3db
+  visible: true
+  learner_created: true
+- name: banking/createDatabase.py
+  visible: true
+  learner_created: true
+- name: banking/petTest.s3db
+  visible: true
+  learner_created: true
+- name: banking/Test2.py
+  visible: true
+  learner_created: true
+- name: banking/dropcards.py
+  visible: true
+  learner_created: true
+- name: card.s3db
+  visible: true
+  learner_created: true
+- name: banking/bankingstrings.py
+  visible: true
+  learner_created: true
+- name: banking/banking.py
+  visible: true
+  text: |
+    # Write your code here
+  learner_created: false
 feedback_link: https://hyperskill.org/projects/109/stages/593/implement
-status: Unchecked
-record: -1
+status: Failed
+feedback:
+  message: |-
+    Unexpected error in test #2
+
+    We have recorded this bug and will fix it soon.
+
+    OS Windows 10
+    CPython 3.8.2
+    Testing library version 3
+
+    Traceback (most recent call last):
+      File "C:\Users\joerg.brose\PycharmProjects\Simple Banking System\.idea\VirtualEnvironment\lib\site-packages\hstest\stage_test.py", line 200, in run_tests
+        output: str = self._run_test(test)
+      File "C:\Users\joerg.brose\PycharmProjects\Simple Banking System\.idea\VirtualEnvironment\lib\site-packages\hstest\stage_test.py", line 139, in _run_test
+        self._check_errors(test)
+      File "C:\Users\joerg.brose\PycharmProjects\Simple Banking System\.idea\VirtualEnvironment\lib\site-packages\hstest\stage_test.py", line 158, in _check_errors
+        raise error_in_test
+      File "C:\Users\joerg.brose\PycharmProjects\Simple Banking System\.idea\VirtualEnvironment\lib\site-packages\hstest\stage_test.py", line 77, in _exec_file
+        self.reset()
+      File "C:\Users\joerg.brose\PycharmProjects\Simple Banking System\.idea\VirtualEnvironment\lib\site-packages\hstest\stage_test.py", line 39, in reset
+        importlib.reload(module)
+      File "C:\Program Files\Python38\lib\importlib\__init__.py", line 168, in reload
+        raise ModuleNotFoundError(f"spec not found for the module {name!r}", name=name)
+    ModuleNotFoundError: spec not found for the module 'bankingstrings'
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    []
+    Max is: Non
+    1. Create an account
+    2. Log into account
+    0. Exit
+  time: Tue, 29 Sep 2020 15:00:36 UTC
+record: 3
